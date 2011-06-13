@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+    <form-beans>
+        <form-bean name="LoginFormBean" type="beans.LoginFormBean"></form-bean>
+        <form-bean name="SignupFormBean" type="beans.SignupFormBean"></form-bean>
+        <form-bean name="ModeratorFormBean" type="beans.admin.ModeratorFormBean"></form-bean>
+        <form-bean name="MoreInfoFormBean" type="beans.MoreInfoFormBean"/>
+        <form-bean name="CommentFormBean" type="beans.CommentFormBean"/>
+        <form-bean name="VisibilityValidationFormBean" type="beans.admin.VisibilityValidationFormBean"/>
+        <form-bean name="IMFormBean" type="beans.admin.IMFormBean"/>
+        <form-bean name="CategoryFormBean" type="beans.admin.CategoryFormBean"/>
+        <form-bean name="ChannelFormBean" type="beans.admin.ChannelFormBean"/>
+        <form-bean name="UserFormBean" type="beans.admin.UserFormBean"/>
+        <form-bean name="ShoutFormBean" type="beans.ShoutFormBean"/>
+        <form-bean name="FriendsFormBean" type="beans.FriendsFormBean"/>
+        <form-bean name="PrivacyFormBean" type="beans.PrivacyFormBean"/>
+        <form-bean name="PasswordFormBean" type="beans.PasswordFormBean"/>
+        <form-bean name="PreferenceFormBean" type="beans.PreferenceFormBean"/>
+    </form-beans>
+
+    <global-exceptions></global-exceptions>
+
+    <global-forwards></global-forwards>
+
+    <action-mappings>
+
+        <action path="/actions/login"
+                type="actions.LoginAction"
+                name="LoginFormBean"
+                scope="session">
+
+            <forward name="classic"
+                         path="/web/user/clear/classic.jsp">
+            </forward>
+            <forward name="idexter"
+                         path="/actions/idexter.do?page=1">
+            </forward>
+            <forward name="failure"
+                         path="/web/guest/ssl/signin.jsp">
+            </forward>
+        </action>
+
+        <action path="/actions/signup"
+                type="actions.SignupAction"
+                name="SignupFormBean"
+                scope="session">
+
+            <forward name="success"
+                         path="/web/user/clear/classic.jsp">
+            </forward>
+            <forward name="failure"
+                         path="/web/guest/ssl/signup.jsp">
+            </forward>
+        </action>
+
+        <action path="/actions/search"
+                type="actions.SearchAction">
+
+            <forward name="usersuccess"
+                         path="/web/user/clear/search.jsp">
+            </forward>
+            <forward name="userfailure"
+                         path="/web/user/clear/classic.jsp">
+            </forward>
+            <forward name="nousersuccess"
+                         path="/web/guest/clear/search.jsp">
+            </forward>
+            <forward name="nouserfailure"
+                         path="/web/guest/ssl/index.jsp">
+            </forward>
+        </action>
+
+        <action path="/actions/logout"
+                type="actions.LogoutAction">
+
+            <forward name="success"
+                         path="/index.jsp">
+            </forward>
+        </action>
+
+        <action path="/actions/editprofile"
+                type="actions.EditProfileAction"
+                name="SignupFormBean"
+                scope="session" >
+
+            <forward name="return"
+                         path="/web/user/ssl/editprofile.jsp">
+            </forward>
+        </action>
+
+        <action path="/actions/checkurl"
+                type="actions.UrlAction"
+                name="CommentFormBean"
+                scope="session">
+        </action>
+
+        <action path="/actions/idexter"
+                type="actions.IDexterAction">
+                    
+            <forward name="usersuccess"
+                        path="/web/user/clear/idexter.jsp">
+            </forward>
+            <forward name="nousersuccess"
+                        path="/web/guest/clear/idexter.jsp">
+            </forward>
+        </action>
+
+        <action path="/actions/admin/moderator"
+                type="actions.admin.ModeratorAction"
+                name="ModeratorFormBean"
+                scope="request" >
+
+            <forward name="return"
+                        path="/web/admin/moderator.jsp">
+            </forward>
+              
+        </action>
+
+        <action name="PasswordFormBean"
+                path="/actions/changepassword"
+                scope="request"
+                type="actions.ChangePasswordAction">
+                
+            <forward name="return"
+                       path="/web/user/ssl/settings.jsp">
+            </forward>
+        </action>
+
+        <action path="/actions/myprofile"
+                type="actions.MyProfileAction">
+
+            <forward name="return"
+                       path="/web/user/clear/myprofile.jsp">
+            </forward>
+                    
+        </action>
+
+        <action name="PreferenceFormBean"
+                path="/actions/preferences"
+                scope="session"
+                type="actions.PreferencesAction">
+                    
+            <forward name="return"
+                       path="/web/user/ssl/settings.jsp">
+            </forward>
+
+        </action>
+
+        <action path="/actions/deleteuser"
+                type="actions.DeleteUserAction">
+
+            <forward name="return"
+                       path="/index.jsp">
+            </forward>
+        </action>
+
+        <action path="/actions/disableuser"
+                type="actions.DisableUserAction">
+
+            <forward name="return"
+                       path="/index.jsp">
+            </forward>
+        </action>
+
+        <action name="PrivacyFormBean"
+                path="/actions/privacy"
+                scope="session"
+                type="actions.PrivacyAction">
+        
+            <forward name="return"
+                       path="/web/user/ssl/settings.jsp">
+            </forward>
+        </action>
+        
+        <action path="/actions/vote"
+                type="actions.VoteAction">
+
+        </action>
+
+        <action name="FriendsFormBean"
+                path="/actions/addfriend"
+                scope="request"
+                type="actions.AddFriendAction" >
+
+            <forward name="return"
+                       path="/web/user/clear/friends.jsp">
+            </forward>
+                    
+        </action>
+        <action path="/actions/myfriends"
+                type="actions.MyFriendAction">
+
+            <forward name="return"
+                     path="/web/user/clear/friends.jsp">
+            </forward>
+        
+        </action>
+
+        <action path="/actions/friendsrequest"
+                type="actions.FriendsRequestAction">
+                    
+            <forward name="return"
+                     path="/web/user/clear/friendsrequest.jsp">
+            </forward>
+                    
+        </action>
+
+        <action name="ShoutFormBean"
+                path="/actions/shout"
+                scope="session"
+                type="actions.ShoutAction">
+
+            <forward name="sendshout"
+                     path="/web/user/clear/friendsactivity.jsp">
+            </forward>
+            <forward name="seeshouts"
+                     path="/web/user/clear/shout.jsp">
+            </forward>
+                    
+        </action>
+
+        <action name="UserFormBean"
+                path="/actions/admin/user"
+                scope="request"
+                type="actions.admin.UserAction">
+        
+            <forward name="return"
+                     path="/web/admin/user.jsp">
+            </forward>
+        
+        </action>
+        <!-- Added by rahul on 12 March-->
+        <action path="/actions/allfriends" type="actions.AllFriendsAction">
+            <forward name="return"
+                     path="/web/user/clear/allfriends.jsp">
+            </forward>
+        </action>
+        <action path="/actions/admin/channel"
+        type="actions.admin.ChannelAction"
+        name="ChannelFormBean"
+                scope="request" >
+            <forward name="return"
+                     path="/web/admin/channel.jsp">
+            </forward>
+        </action>
+        <action path="/actions/admin/category"
+        type="actions.admin.CategoryAction"
+        name="CategoryFormBean"
+                scope="request">
+            <forward name="return"
+                     path="/web/admin/category.jsp">
+            </forward>
+        </action>
+        <action path="/actions/admin/im"
+            type="actions.admin.IMAction"
+            name="IMFormBean"
+                scope="request">
+
+            <forward name="return"
+                     path="/web/admin/im.jsp">
+            </forward>
+        </action>
+        <action path="/actions/admin/visibilityvalidation"
+            type="actions.admin.VisibilityValidationAction"
+            name="VisibilityValidationFormBean"
+                scope="request">
+            <forward name="return"
+                     path="/web/admin/visibility.jsp">
+            </forward>
+        </action>
+        <action path="/actions/recentactivity"
+            type="actions.RecentActivityAction">
+            <forward name="return"
+                     path="/web/user/clear/recentactivity.jsp">
+            </forward>
+        </action>
+        <action path="/actions/moreinfo"
+                type="actions.MoreInfoAction"
+                name="MoreInfoFormBean"
+                scope="session">
+        </action>
+        <action path="/actions/displayfavorite" type="actions.DisplayFavoriteAction">
+            <forward name="return"
+                     path="/web/user/clear/favourite.jsp">
+            </forward>
+        </action>
+                
+        <action path="/actions/favorite" type="actions.FavoriteAction">
+
+        </action>
+        <action path="/actions/friendsactivity" type="actions.FriendsActivityAction">
+            <forward name="return"
+                     path="/web/user/clear/friendsactivity.jsp">
+            </forward>
+        </action>
+        <action path="/actions/admin/urlreport" type="actions.admin.URLReportAction">
+            <forward name="return"
+                     path="/web/mod/urlreports.jsp">
+            </forward>
+        </action>
+        <action path="/actions/admin/commentreport" type="actions.admin.CommentReportAction">
+            <forward name="return"
+                     path="/web/mod/commentreports.jsp">
+            </forward>
+            </action>
+    </action-mappings>
+  
+</struts-config>

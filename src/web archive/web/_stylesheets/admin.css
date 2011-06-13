@@ -1,0 +1,63 @@
+/*new class added for panel look in admin page*/
+.rightpanel							
+{
+	height: auto;
+	width: 15%;
+	min-height: 500px;
+	padding-left: 0%;
+	float: right
+}
+
+/*new class added for panel look in admin page*/
+.leftpanel							
+{
+	width: 80%;
+	padding-left: 0%;
+	height: auto;
+	min-height: 500px;	
+}
+
+/*side-menu found in admin pages*/
+.side-menu, .side-menu li {  		
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*side-menu found in admin pages*/
+.side-menu { 						
+	margin-bottom: 1.5em;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #000000;
+}
+
+/*side-menu found in admin pages*/
+.side-menu a { 						
+	display: block;
+	padding: 4px 10px 4px 32px;
+	font-weight: bold;
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #0000FF;
+}
+
+/*side-menu found in admin pages*/
+.side-menu a.current { 					
+	background-color: #0000CC;
+	color: #DEE7F1;
+	background-position: 0px;
+	margin: -1px 0 1px -24px;
+	border-bottom: none;
+	padding-left: 37px;
+	background-image: url(../_images/arrow.gif);
+	background-repeat: no-repeat;
+	}
+
+/*side-menu found in admin pages*/
+.side-menu a.menu-disabled, .side-menu a.menu-disabled em { 	
+    color: #999;
+    cursor: text;
+    font-weight: normal;
+}

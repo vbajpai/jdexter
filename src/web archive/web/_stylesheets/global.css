@@ -1,0 +1,140 @@
+.container{
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;						/* December 30, 2008 */
+	font-size: 12px;
+	height: auto;
+	background-color: white;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	min-width: 800px; /*helps when window is resized or resolution is low */
+}
+
+.logo{
+	width: auto;
+	height: auto;	
+}
+
+/*increased word-spacing*/
+.header{
+	color: #999999;
+	word-spacing: 30px;	
+	height: inherit;	
+}
+
+a:link {text-decoration: none; }
+a:visited {text-decoration: none; }
+a:hover {text-decoration: underline; }
+a:active {}
+
+a.header:link {font-weight: bold;}
+a.header:visited {font-weight: bold;}
+a.header:hover {font-weight: bold; text-decoration: none;}
+a.header:active {font-weight: bold;}
+
+/* block hover effect in block and toplink respectively */
+a.toplinks:link {color: black;}
+a.toplinks:visited {color: black;}
+a.toplinks:hover {color: black; background: orange;}				/* December 30, 2008 */
+a.toplinks:active {}
+
+a.block:link {color: white;}
+a.block:visited {color: white;}
+a.block:hover {color: white; background: maroon;}					/* December 30, 2008 */
+a.block:active {color: white;} 
+
+a.blueblock:link {color: white;}
+a.blueblock:visited {color: white;}
+a.blueblock:hover {color: white; background: darkblue;}					/* December 30, 2008 */
+a.blueblock:active {color: white;}
+
+.multiwordlinks {	
+	word-spacing: 1px;
+}
+
+/* Padding for toplinks increased to accomodate login box and profile pic */						/* December 30, 2008 */
+.toplinks{
+	background-color:  #E3E2D8;
+    color: #636363;
+	text-align: right;	
+	height:inherit;
+	padding-top: 6px;
+	padding-right: 10px;
+	padding-bottom: 6px;
+	padding-left: 10px;
+    font-weight: bold;
+}
+
+/* Padding removed from sublink and added to categories, channels and timeframe, sublinks is now just a container with no background */					/* December 30, 2008 */
+.sublinks{
+	height: inherit;
+	/* font color (white) removed */
+}
+
+.categories {
+	background-color: #14120F;		
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+
+.channels{
+	background-color: #2F271F;	
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;	
+}
+
+.timeframe{
+	background-color: #585852;	
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-left: 20px;	
+}
+
+/* Added for extra padding required for block-style hover */			/* December 30, 2008 */
+.block {
+	padding-top: 4px;
+	padding-right: 10px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+}
+
+.content{
+	height: inherit;
+	padding-top: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+	min-height: 600px;		
+}
+
+.footer{
+	background-color: #E3E2D8;
+	height: inherit;
+	text-align: center;
+	font-size: 10px;
+	padding-top: 4px;
+	padding-right: 10px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	clear: right;
+}
+
+h1 {font-size: 18px;}
+
+h2 {font-size: 16px;}
+
+h3 {font-size: 14px;}
+
+h4 {font-size: 12px;}																						/* January 3, 2009 */
+
+/* Fixed Height for iDexter, to allow for drop down menu to float inside */									/* January 3, 2009 */
+.icategories {
+	height: 20px;
+}
+
+
+

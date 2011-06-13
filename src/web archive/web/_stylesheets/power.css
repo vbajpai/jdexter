@@ -1,0 +1,296 @@
+.contentheading {
+    background-color: #2F271F;
+    text-align: center;
+    height: 30px;
+    width: 170px;
+    padding-top: 10px;
+    color: white;
+    -moz-border-radius: 5px;		/*rounded corners for FF and safari*/
+    -moz-border-radius-bottomleft: 0px;
+    -moz-border-radius-bottomright: 0px;
+    -webkit-border-radius: 5px;
+    border:1px solid #000000;
+}
+
+/* renamed from profilepic to fright */		
+.fright{
+    float: right;
+}
+
+.fleft{
+    float: left;
+}
+
+.designrow {
+    background-color:lightblue;
+    text-align: center;
+}
+
+.tablehead{
+    background-color:maroon;
+    color: white;
+    text-align: center;
+}
+
+.leftcolumn {	
+    width: 50%;
+    padding-left: 0%;
+    height: auto;
+    /* min-height: 500px; */				/* Removed by RB on October 9, 2008 */
+}
+.rightcolumn {	
+    height: auto;
+    width: 45%;
+    /* min-height: 500px; */				/* Removed by RB on October 9, 2008 */
+    padding-left: 0%;
+    float: right
+}
+
+.dynamicdivs{	
+    background-color: #DEE7F1;
+    -moz-border-radius: 5px;		/*rounded corners for FF and safari*/
+    -moz-border-radius-topleft: 0px;
+    -webkit-border-radius: 5px;
+    border:1px solid #000000;
+    min-height: 200px;
+}
+
+.main{	
+    min-height: 200px;
+}
+
+ul.nobullet, li.nobullet{	
+    list-style:none;
+}
+
+/* January 3, 2009 by VB */
+.nostyle{
+    padding:0;
+    margin:0;
+}
+
+h1, h2, h3, h4, h5, h6, b{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    width: auto;
+}
+
+/* Added on Decemeber 30, 2008 by VB */
+
+/* Keeps right-aligned table contained within a div */
+table.toptable{
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+/* Textbox and Button Style with Different Border */
+.input{
+    border: 1px solid #006;
+    font-family: "lucidagrande";
+    font-size: 12px;
+}
+
+/* Left Floating div in Toplinks (used in toggle login) */
+.topleft{
+    float:left;
+    padding-top:1px;
+}
+
+/* Right Floating div in TopLinks */
+.topright{
+    float:right;
+    padding-top:5px;
+}
+
+/* fixed height for toplink for login toggle */
+.jtoplinks{
+    height: 25px;
+}
+
+/* Used to keep floating divs within container */
+.clear{	
+    clear:both;
+}
+
+/* Added on 3rd January, 2009 by VB */
+
+/* Center Align Images */
+img {
+    vertical-align:middle;
+    border: 0px;
+}
+
+li {
+    vertical-align:middle;
+}
+
+/* Overrides ContentHeading for iDexter */
+.idexter{	
+    padding-top: 0px;
+    height: auto;
+    word-spacing: 10px;
+}
+
+.ichannel{
+    width: auto;
+}
+
+.itimeframe{
+    width: auto;
+}
+
+/* To use for tags that have inplicit padding and margin */
+.notop{
+    padding-top:0px;
+    margin-top: 0px;
+}
+
+/* used for URL description in iDexter */
+.fw{
+    width: 500px;
+}
+
+.fwcomment{
+    width: 500px;
+    padding-left: 100px;
+}
+
+blockquote.fwmore{
+    width: 330px;
+}
+
+/* compatibility with different browsers */
+textarea.tasize{
+    width: 420px;
+    height: 100px;
+}
+
+/* Drop Down Menu */
+
+.menu {width:750px; height:80px; position:relative; font-size:11px; z-index:100;float:left;}
+.menu ul li a, .menu ul li a:visited {display:block; text-decoration:none; color:#000;width:104px; height:20px; text-align:center; color:#fff; background:#14120F; line-height:20px; font-size:11px; overflow:hidden;}
+.menu ul {padding:0; margin:0; list-style: none;}
+.menu ul li {float:left; position:relative;}
+.menu ul li ul {display: none;float:left;}
+
+.menu ul li:hover a {color:#fff; background:maroon;border:1px solid #fff;}
+.menu ul li:hover ul {display:block; position:absolute; top:21px; left:0; width:105px;}
+.menu ul li:hover ul li ul {display: none;}
+.menu ul li:hover ul li a {display:block; background:black; color:white;}
+.menu ul li:hover ul li a:hover {background:white; color:black;}
+.menu ul li:hover ul li:hover ul {display:block; position:absolute; left:105px; top:0;}
+.menu ul li:hover ul li:hover ul.left {left:-105px;}
+
+/* Added on 16th January, 2009 by VB */
+
+.error{
+    color: maroon;
+    font-weight: bolder;
+}
+
+.success{
+    color: blue;
+    font-weight: bold;
+    text-align: center;
+}
+
+.centerform{
+    width: 70%;
+    padding-top: 4%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 15%;
+    text-align: center;
+}
+
+.round{
+    -moz-border-radius: 5px;		/*rounded corners for FF and safari*/
+    -moz-border-radius-bottomleft: 0px;
+    -moz-border-radius-bottomright: 0px;
+    -webkit-border-radius: 5px;
+}
+
+/* Added on 19th January, 2009 */
+
+/* to demarcate the lists */
+.demarcate li{
+    border-top: 1px solid #90bade;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+/* to use inside dynamic div for proper padding and center alignment */
+.center{
+    width: 90%;
+    padding-top:3%;
+    padding-bottom: 5%;
+    padding-left: 3%;
+}
+
+.centersmall{
+    width: 80%;
+    padding-top:3%;
+    padding-bottom: 5%;
+    padding-left: 3%;
+}
+
+.quarterwidth{
+    width: 25%;
+}
+
+.padleft{
+    padding-left: 27px;
+}
+.padleftalignright{
+    padding-left: 27px;
+    padding-right: 10px;
+    text-align:right;
+
+
+}
+
+.padleftsmall{
+    padding-left: 9px;
+}
+
+.centeradmin{
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+}
+
+.urltitle{
+    font-size: 13px;
+}
+
+.centerdiv{
+    padding-top:8%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 8%;
+}
+
+.headinginline{
+    display:inline;
+}
+
+table {
+    font-size: inherit;
+}
+
+.hidden {
+    display:none;
+}
+
+.dialog {
+    font-size:62.5%;
+    font-family: "lucidagrande";
+}
+
+fieldset {
+    padding:0;
+    border:0;
+    margin-top:25px;
+}
