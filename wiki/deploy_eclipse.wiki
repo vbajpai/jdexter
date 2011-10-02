@@ -1,0 +1,63 @@
+#labels eclipse,Featured
+#How to Deploy on Eclipse
+
+=== Introduction ===
+
+This page provides a step-by-step overview on how to deploy the project using Eclipse. This wiki was written and tested on a Mac OS X machine; if you're on a different platform the steps would be similar, however your mileage would vary.
+
+=== Details ===
+
+Setup Environment
+
+        * Check out the Trunk
+
+	* Install Glass Fish Server Adaptor on Eclipse
+
+	* Install Glass Fish Open Source Server v3.0.1
+
+	* Install MySQL Community Server v5.x
+		* Install the Preference Pane to Toggle Start/Stop of Server (Mac OS X Only)
+		* Download MySQL Work Bench
+			* Create a New Server Instance
+			* Setup a Username and Password (root:root)
+			* Create a DB Schema (dexter)
+
+	* Push MySQL Connector Jar to Glass Fish "lib" Folder
+
+	* Create a New Database Connection (use root:root and dexter) in Eclipse
+		* You Need to specify the MySQL Connector Jar Location Here. 
+
+Changes to Glassfish Admin Console (http://localhost:4848/)
+
+	* Create a Connection Pool (Resources | JDBC | Connection Pool)
+ 	* Pool Name (__DexterPool)
+	* Resource Type (javax.sql.ConnectionPoolDataSource)
+	* Database Vendor (MySQL)
+	 * Additional Properties
+		* User (root)
+		* Password (root) 
+		* Database Name (dexter)
+		* URL (jdbc:mysql://localhost:3306/dexter)
+
+Ping the ConnectionPool (it should succeed at this point)
+
+Create a JNDI Name (Resources | JDBC | JDBC Resources) 
+	* JNDI Name (jdbc/__Dexter)
+	* Enabled (true) 
+	* Connection Pool (__DexterPool)
+
+Create an Enterprise Project (DexterEnterprise)
+
+Create a Dynamic Web Project (Dexter) and Connect to DexterEnterprise while Creating	
+
+Create an EJB Project (DexterEJB)
+	* Change the EJB Module Version to 3.0
+
+Add DexterEJB in the Build Path of DexterWeb 
+	* Struts, JSTL and JSON Libraries are already in WEB-INF/lib
+
+Push Hibernate Library into Glassfish lib
+
+Deploy DexterEnterprise
+
+Run Dexter

@@ -1,0 +1,45 @@
+#labels Featured
+#How to Run the Enterprise Archive
+
+=== Introduction ===
+
+This Wiki helps you quickly demo the project using the built ready-to-deploy enterprise archive. You still need to configure the Glass Fish Application Server and MySQL though.
+
+
+=== Details ===
+
+
+
+Install Glass Fish Open Source Server v3.0.1
+
+Install MySQL Community Server v5.x
+		* Install the Preference Pane to Toggle Start/Stop of Server (Mac OS X Only)
+		* Download MySQL Work Bench
+			* Create a New Server Instance
+			* Setup a Username and Password (root:root)
+			* Create a DB Schema (dexter)
+
+Push MySQL Connector Jar and Hibernate Library Jars to Glass Fish "lib" Folder
+	
+Changes to Glassfish Admin Console (http://localhost:4848/)
+
+	* Create a Connection Pool (Resources | JDBC | Connection Pool)
+ 	* Pool Name (__DexterPool)
+	* Resource Type (javax.sql.ConnectionPoolDataSource)
+	* Database Vendor (MySQL)
+	 * Additional Properties
+		* User (root)
+		* Password (root) 
+		* Database Name (dexter)
+		* URL (jdbc:mysql://localhost:3306/dexter)
+
+Ping the ConnectionPool (it should succeed at this point)
+
+Create a JNDI Name (Resources | JDBC | JDBC Resources) 
+	* JNDI Name (jdbc/__Dexter)
+	* Enabled (true) 
+	* Connection Pool (__DexterPool)
+
+Start Glass Fish Server
+
+Goto - http://localhost:8080/Dexter
