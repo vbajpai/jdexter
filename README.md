@@ -4,6 +4,7 @@ How to Run the Enterprise Archive
 ### Introduction
 
 This Wiki helps you quickly demo the project using the built ready-to-deploy enterprise archive.
+
 You still need to configure the Glass Fish Application Server and MySQL though.
 
 
@@ -12,11 +13,11 @@ You still need to configure the Glass Fish Application Server and MySQL though.
 1. Install Glass Fish Open Source Server v3.0.1
 
 2. Install MySQL Community Server v5.x
-		* Install the Preference Pane to Toggle Start/Stop of Server (Mac OS X Only)
-		* Download MySQL Work Bench
-			* Create a New Server Instance
-			* Setup a Username and Password: `root:root`
-			* Create a DB Schema: `dexter`
+	* Install the Preference Pane to Toggle Start/Stop of Server (Mac OS X Only)
+	* Download MySQL Work Bench
+		* Create a New Server Instance
+		* Setup a Username and Password: `root:root`
+		* Create a DB Schema: `dexter`
 
 3. Push MySQL Connector Jar and Hibernate Library Jars to Glass Fish `lib` Folder
 	
@@ -50,14 +51,16 @@ How to Deploy on Eclipse
 ## Introduction
 
 This page provides a step-by-step overview on how to deploy the project using Eclipse. 
+
 This wiki was written and tested on a Mac OS X machine.
+
 If you're on a different platform the steps would be similar, however your mileage would vary.
 
 ## Details
 
 1. Setup Environment
 
-        * Clone the repository 
+	* Clone the repository 
 
 	* Install Glass Fish Server Adaptor on Eclipse
 
