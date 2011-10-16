@@ -112,3 +112,17 @@ If you're on a different platform the steps would be similar, however your milea
 10. Deploy `DexterEnterprise`
 
 11. Run Dexter
+
+
+Documents
+---------
+
+  * [Proposal Slides](https://github.com/downloads/vbajpai/jdexter/proposal_slides.ppt)
+  * [Synopsis](https://github.com/downloads/vbajpai/jdexter/synopsis.pdf)
+  * [Feasibility Study](https://github.com/downloads/vbajpai/jdexter/feasibility_study.pdf)
+  * [Use Cases](https://github.com/downloads/vbajpai/jdexter/usecases.zip)
+  * [SRS](https://github.com/downloads/vbajpai/jdexter/srs.pdf)
+  * [Class Diagrams](https://github.com/downloads/vbajpai/jdexter/class_diagrams.zip)
+  * [Database Designs](https://github.com/downloads/vbajpai/jdexter/database_design.pdf)
+  * [Report](https://github.com/downloads/vbajpai/jdexter/report.pdf)
+  * [Enterprise Archive](https://github.com/downloads/vbajpai/jdexter/dexter_enterprise.ear)
